@@ -4,8 +4,16 @@ jobs:
     name: Call Device Endpoints
     runs-on: windows-latest
     steps:
-      # - name: Install Runner dependencies
-      #   run: npm install 
+      - name: Download Current Repository
+        uses: actions/checkout@v2
+
+      - name: Install Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: "16.x"
+
+      - name: Install Runner dependencies
+        run: npm install 
         
       - name: Call Device endpoint
         id: apiCall
