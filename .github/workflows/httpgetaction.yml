@@ -1,11 +1,11 @@
 on: push
 jobs:
-  api-call-job:
-    name: API Call via action
+  device-endpoint-actions:
+    name: Call Device Endpoints
     runs-on: windows-latest
     steps:
-      # - name: Install Runner dependencies
-      #   run: npm install 
+      - name: Install Runner dependencies
+        run: npm install 
         
       - name: Call API
         id: apiCall
