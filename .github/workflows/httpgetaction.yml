@@ -4,12 +4,12 @@ jobs:
     name: API Call via action
     runs-on: windows-latest
     steps:
-     # - name: Install Runner dependencies
-     #   run: npm install 
+      - name: Install Runner dependencies
+        run: npm install 
         
       - name: Call API
         id: apiCall
-        uses: 'DeclanRodgers/get-and-print-github-action@v1.1'
+        uses: 'DeclanRodgers/XAPI-Github-Action'
         with:
              destination-filter: 'CC5A535FEA2F'
              token-data: ${{ secrets.JWT_TOKEN }}
