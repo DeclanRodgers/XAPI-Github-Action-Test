@@ -2,12 +2,12 @@ on: push
 jobs:
   device-endpoint-actions:
     name: Call Device Endpoints
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Install Runner dependencies
         run: npm install 
         
-      - name: Call API
+      - name: Call DEVICE endpoint
         id: apiCall
         uses: 'DeclanRodgers/XAPI-Github-Action@0.9'
         with:
