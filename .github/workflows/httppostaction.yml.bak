@@ -1,0 +1,14 @@
+on: push
+jobs:
+  api-call-job:
+    name: API Call via action
+    runs-on: windows-latest
+    steps:
+     # - name: Install Runner dependencies
+     #   run: npm install 
+        
+      - name: Call API
+        id: apiCall
+        uses: 'DeclanRodgers/get-and-print-github-action@v1.1'
+        with:
+            api-endpoint-url: 'https://www.thecocktaildb.com/api/json/v1/1/random.php'
