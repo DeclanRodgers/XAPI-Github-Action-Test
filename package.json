@@ -1,7 +1,7 @@
 {
-  "name": "get-and-print-github-action",
+  "name": "XAPI-Github-Action-Test",
   "version": "1.0.0",
-  "description": "This action prints the GET data response from a specified API.",
+  "description": "Sending and retrieving data from Cisco XAPI MPP enabled devices.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
