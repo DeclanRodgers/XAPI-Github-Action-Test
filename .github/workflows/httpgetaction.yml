@@ -13,7 +13,10 @@ jobs:
           node-version: "16.x"
 
       - name: Install Runner dependencies
-        run: npm install 
+        run: npm install
+
+      - name: Install Axios
+        run: npm install axios@1.3.2 
         
       - name: Call Device endpoint
         id: apiCall
