@@ -2,7 +2,7 @@ on: push
 jobs:
   device-endpoint-actions:
     name: Call Device Endpoints
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Download Current Repository
         uses: actions/checkout@v2
