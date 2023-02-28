@@ -17,16 +17,13 @@ jobs:
             npm install
             npm list
 
-      #- name: Install Axios
-      #  run: |
-      #      npm install -g axios@1.3.4 
-      #      npm list axios
-        
-      - name: Call Device endpoint
-        id: apiCall
+      - name: Install Axios
         run: |
             npm install -g axios@1.3.4 
             npm list axios
+        
+        name: Call Device endpoint
+        id: apiCall
         uses: 'DeclanRodgers/XAPI-Github-Action@0.9'
         with:
              destination-filter: 'CC5A535FEA2F'
