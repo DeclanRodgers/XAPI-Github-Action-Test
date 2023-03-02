@@ -16,11 +16,6 @@ jobs:
         run: |
             npm install
             npm list
-
-     # - name: Install and verify Node Modules
-      #  run: |
-       #     npm install -g axios@1.3.4 
-        #    npm list axios
         
       - name: Call Device Endpoint
         id: apiCall
