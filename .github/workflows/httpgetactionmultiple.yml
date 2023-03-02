@@ -22,7 +22,7 @@ jobs:
         
       - name: Call Device Endpoint
         id: apiCall
-        uses: 'DeclanRodgers/XAPI-Github-Action@1.0b'
+        uses: 'DeclanRodgers/XAPI-Github-Action@0.9'
         with:
              destination-filter: ${{ matrix.devices }}
              token-data: ${{ secrets.JWT_TOKEN }}
