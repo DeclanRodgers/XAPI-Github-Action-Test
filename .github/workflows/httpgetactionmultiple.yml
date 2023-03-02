@@ -1,5 +1,9 @@
 on: push
 jobs:
+  example_matrix:
+    strategy:
+      matrix:
+        device: ["CC5A535FEA2F", "74860B8FDA23", "382056192034"]
   device-endpoint-actions:
     name: Call Device Endpoints
     runs-on: ubuntu-latest
@@ -21,6 +25,6 @@ jobs:
         id: apiCall
         uses: 'DeclanRodgers/XAPI-Github-Action@1.0b'
         with:
-             destination-filter: '["CC5A535FEA2F", "74860B8FDA23", "382056192034"]'
+             destination-filter: ${{ matrix.device }}
              token-data: ${{ secrets.JWT_TOKEN }}
              
